@@ -12,6 +12,7 @@ from linebot.models import (
 
 app = Flask(__name__)
 
+# Channel Access Token
 line_bot_api = LineBotApi('VMXzbphrpR9UVV7WmuPylRmiyNXXaxiNAeyso+UloPDPcnyphBWdz4mYRkaZj6YK2QJrwYIKVcQ64XRhazX8Ve2DMoVnUYzBcYKt/bECupDe6MkK8dg5QAiJl9ms2ohTOWoK7Bf/c8XoqKAsbXY+WQdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('1ceef6519472f8aba6671d9413151c7b')
 
@@ -31,7 +32,20 @@ def handle_message(event):
 	#line_bot_api.reply_message(
 	#	event.reply_token,
 	#	TextSendMessage(text=event.message.text))
-	message = TextSendMessage(text='Hello World')
-	line_bot_api.reply_message(event.reply_token, message)
+
+	# send help message
+	if event.message.text == u'!9':
+		line_bot_api.reply_message(event.reply_message, 'help')
+	elif event.message.text == u'最近避難所':
+		line_bot_api.reply_message(event.reply_message, 'shelter')
+	elif event.message.text == u'物資':
+		line_bot_api.reply_message(event.reply_message, 'resource')
+	elif event.message.text == u'避難準備':
+		line_bot_api.reply_message(event.reply_message, 'preparation')
+	elif event.message.text == u'其他':
+		line_bot_api.reply_message(event.reply_message, 'others')
+	else:
+		message = TextSendMessage(text='Hello World')
+		line_bot_api.reply_message(event.reply_token, message)
 if __name__ == "__main__":
 	app.run()
