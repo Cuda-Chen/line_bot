@@ -39,5 +39,7 @@ CWT
 * Connect to CWT. (OPTIMAL)
 
 ## QR Code
-![QR code]
-(http://qr-official.line.me/L/yetDT4VHcU.png)
+![QR code](https://github.com/Cuda-Chen/line_bot/blob/master/QRcode.png)
+
+## Demo
+![Demo](https://github.com/Cuda-Chen/line_bot/blob/master/demo.png)
