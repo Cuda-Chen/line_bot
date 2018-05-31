@@ -15,5 +15,4 @@ CWT
 * Connect to CWT. (OPTIMAL)
 
 ## QR Code
-![Image of line bot]
-(http://qr-official.line.me/L/yetDT4VHcU.png)
+![Image of line bot](http://qr-official.line.me/L/yetDT4VHcU.png)
